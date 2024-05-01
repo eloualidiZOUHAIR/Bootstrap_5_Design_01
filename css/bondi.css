@@ -1,0 +1,211 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-title::after {
+  content: '';
+  width: 130px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark-color);
+  .navbar-toggler {
+    color: white;
+    font-size: 23px;
+    border-color: white;
+    &:focus {
+      box-shadow: none;
+    }
+    &[aria-expanded='true'] {
+      border-color: var(--green-color);
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: white;
+    }
+    .active,
+    .nav-link:focus,
+    .nav-link:hover {
+      color: var(--green-color);
+    }
+  }
+  .search {
+    border-left: 1px solid var(--green-color);
+    & svg {
+      color: var(--green-color);
+    }
+  }
+}
+/* End Navbar */
+/* Start Navbar  */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+/* End Navbar  */
+/* Start Feature  */
+.feature {
+  .feat {
+    .icon-holder {
+      height: 200px;
+      & svg {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .number {
+        color: var(--section-color);
+        font-size: 12rem;
+      }
+      .icon {
+        color: var(--green-color);
+      }
+    }
+    & h4 {
+      color: var(--yellow-color);
+    }
+  }
+}
+/* End Feature  */
+/* Star our-work  */
+.our-work {
+  background-color: var(--section-color);
+  .list-unstyled {
+    & li {
+      cursor: pointer;
+      &:not(.active):hover {
+        color: var(--red-color);
+      }
+    }
+    .active {
+      background-color: var(--red-color);
+      color: var(--yellow-color);
+      padding: 0.5rem 1rem;
+    }
+  }
+  .row {
+    .box {
+      padding: 5px;
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: attr(data-work);
+        position: absolute;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background-color: rgb(51 209 204 / 70%);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transform: translateX(calc(-100% - 5px));
+        transition: 0.3s;
+      }
+      &:hover::before {
+        transform: translateX(0%);
+      }
+    }
+  }
+}
+/* End Our-work  */
+/* Start Stuff  */
+.stuff {
+  .description {
+    max-width: 500px;
+  }
+}
+/* End Stuff  */
+/* Start team  */
+.team {
+  background-color: var(--section-color);
+  & h2 {
+    color: var(--yellow-color);
+  }
+  .row {
+    & h4 {
+      background-color: var(--green-color);
+    }
+  }
+}
+/* End team  */
+/* Start project  */
+.project {
+  background-color: var(--dark-color);
+}
+/* End project  */
+/* Start subscribe */
+.subscribe {
+  background-color: #ffc400;
+  .row {
+    & input[type='text'] {
+      &:focus {
+        outline: 0;
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+    & input[type='submit'] {
+      background-color: var(--dark-color);
+      color: var(--yellow-color);
+    }
+  }
+}
+/* End subscribe */
+/* Start Footer  */
+.footer {
+  background-color: var(--dark-color);
+  .copyright {
+    & span {
+      color: var(--green-color);
+    }
+    & div span {
+      color: var(--yellow-color);
+    }
+  }
+  .contact {
+    & ul {
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+      .facebook {
+        background-color: #1877f2;
+      }
+      .x-twitter {
+        background-color: #000000;
+      }
+      .youtube {
+        background-color: #ff0000;
+      }
+      .linkedin {
+        background-color: #0a66c2;
+      }
+    }
+  }
+}
+/* End Footer  */
