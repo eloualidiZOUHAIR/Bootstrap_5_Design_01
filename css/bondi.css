@@ -31,9 +31,6 @@ body {
 .navbar {
   background-color: var(--dark-color);
   .navbar-toggler {
-    color: white;
-    font-size: 23px;
-    border-color: white;
     &:focus {
       box-shadow: none;
     }
@@ -42,9 +39,6 @@ body {
     }
   }
   .navbar-nav {
-    .nav-link {
-      color: white;
-    }
     .active,
     .nav-link:focus,
     .nav-link:hover {
